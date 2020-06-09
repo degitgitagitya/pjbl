@@ -2,12 +2,11 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_Materi extends CI_Model {
-
-  //ambil semua data
   public function getAll(){
     $data = $this->db->get("tb_materi");
     return $data->result();
   }
+
   public function getBySiswa($id){
     $this->db->where('id_siswa',$id);
     $data = $this->db->get("tb_materi");

@@ -1,14 +1,13 @@
 <div class="container">
-	<h5>
+	<h3>
 		Daftar Materi
-	</h5>
+	</h3>
 	<hr>
-
 	<?php 
 		if (isset($listMateri)){
 			foreach ($listMateri as $data) {
 				?>
-				<div class="w-100 mb-3">
+				<div class="w-100 bg-white mb-3">
 					<div class="p-3 shadow-sm">
 						<div class="d-flex justify-content-between">
 							<div class="font-weight-bold">

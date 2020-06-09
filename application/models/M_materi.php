@@ -38,5 +38,11 @@ class M_Materi extends CI_Model {
     $data = $this->db->get('tb_materi');
     return $data->result();
   }
+
+  public function getMateriById($id){
+    $this->db->where('id_proyek', $id);
+    $data = $this->db->get('tb_materi');
+    return $data->result();
+  }
 }
 

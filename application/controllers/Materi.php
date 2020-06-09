@@ -27,4 +27,12 @@ class Materi extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+	public function viewMateri($id){
+		$daftarMateri['listMateri'] = $this->M_materi->getMateriById($id);
+
+		$this->load->view('header');
+		$this->load->view('v_materi', $daftarMateri);
+		$this->load->view('footer');
+	}
+
 }

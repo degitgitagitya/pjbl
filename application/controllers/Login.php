@@ -26,7 +26,7 @@ class Login extends CI_Controller{
 				'logged_in' => TRUE
 			);
 			$this->session->set_userdata($newData);
-			redirect(base_url('index.php/Materi'));
+			redirect(base_url('index.php/Proyek'));
 		}else{
 			$viewData['err']="Username/Password Salah";
 			$this->load->view('header');

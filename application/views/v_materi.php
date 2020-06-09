@@ -1,9 +1,3 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
-<html lang="en">
-
-<body>
 <div class="container">
 	<div class="shadow-sm d-flex  p-3 mb-5 mt-4 bg-white rounded justify-content-center">	
 	<h1>Daftar Materi</h1>
@@ -41,8 +35,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		$nomor++;
 	};
   ?>
-</table>
+	</table>
 </div>
-
-</body>
-</html>

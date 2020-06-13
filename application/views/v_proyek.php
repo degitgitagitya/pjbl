@@ -20,7 +20,7 @@
                                 <?php echo $data->desk_proyek ?>
                             </div>
                             <div class="px-3 pb-3">
-                                <a href="<?php echo base_url("index.php/Materi/viewMateri/".$data->id_proyek)?>" class="btn btn-secondary w-100 text-white">
+                                <a href="<?php echo base_url("index.php/Pretest/getPertanyaanByProyek/".$data->id_proyek)?>" class="btn btn-secondary w-100 text-white">
                                     Detail
                                 </a>
                             </div>

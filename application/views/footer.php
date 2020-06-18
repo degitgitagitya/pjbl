@@ -1,5 +1,11 @@
 
-    <footer class="footer bg-light py-5 shadow">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer class="footer bg-light py-5 mt-5 shadow">
         <div class="container-fluid">
         <div class="text-muted">NAHDA LUTHFIA MUNTAQO - 2020</div>
         </div>

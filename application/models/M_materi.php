@@ -43,5 +43,23 @@ class M_Materi extends CI_Model {
     $data = $this->db->get('tb_materi');
     return $data->result();
   }
+
+  public function getJawabanMateri($idPjbl) {
+    $this->db->where('id_pjbl', $idPjbl);
+    $data = $this->db->get('tb_jwb_materi');
+    return $data->result();
+  }
+
+  public function addJawaban($arr){
+    $this->db->insert('tb_jwb_materi', $arr);
+
+    return $this->db->affected_rows();
+  }
+
+  public function removeTugas($idJawaban){
+    $this->db->delete('tb_jwb_materi', array('id_jwb_materi' => $idJawaban));
+
+    return $this->db->affected_rows();
+  }
 }
 

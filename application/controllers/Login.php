@@ -44,7 +44,8 @@ class Login extends CI_Controller{
 		unset(
 			$_SESSION['id_siswa'],
 			$_SESSION['username_siswa'],
-			$_SESSION['logged_in']
+			$_SESSION['logged_in'],
+			$_SESSION['id_pjbl']
 		);
 
 		redirect(base_url('index.php/Login'));

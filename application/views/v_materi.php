@@ -27,7 +27,7 @@
 									Materi
 								</div>
 								<hr>
-								<a href="" class="btn btn-info">
+								<a href="<?php echo (base_url('index.php/Materi/downloadMateri/'.$data->file_materi)); ?>" target="_blank" class="btn btn-info">
 									Download File Materi
 								</a>
 							</div>
@@ -40,9 +40,42 @@
 									<?php echo $data->tugas_materi ?>
 								</div>
 								<hr>
-								<a href="" class="btn btn-warning">
-									Kirim Tugas
-								</a>
+								<?php 
+									$status = 0;
+									$idJawaban = null;
+									$fileTugas = null;
+
+									foreach ($listJawaban as $element) {
+										if ($data->id_materi == $element->id_materi){
+											$status = 1;
+											$idJawaban = $element->id_jwb_materi;
+											$fileTugas = $element->file_jwb_materi;
+										}
+									}
+								?>
+
+								<?php 
+								
+									if ($status == 0){
+										?>
+											<?php echo form_open_multipart('index.php/Materi/uploadTugas/'.$data->id_materi);?>
+
+												<input type="file" name="userfile" size="20" />
+
+												<input type="submit" class="btn btn-warning" value="Kirim Tugas" />
+
+											</form>
+										<?php
+									} else {
+										?>
+											<a href="<?php echo (base_url('index.php/Materi/downloadTugas/'.$fileTugas)); ?>" target="_blank" class="btn btn-success" >Lihat Tugas Yang Telah Diunggah</a>
+											<a href="<?php echo base_url('index.php/Materi/deleteTugas/'.$idJawaban) ?>" class="btn btn-danger">Delete Tugas</a>
+										<?php 
+									}		
+
+								?>
+
+								
 							</div>
 						</div>
 					</div>
